@@ -1,26 +1,110 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abubakar Siddique</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .form-box {
+            background: #ffffff;
+            border: 1px solid #dcdcdc;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            padding: 30px 40px;
+            max-width: 480px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .form-box h2 {
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 25px;
+            color: #333333;
+        }
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 15px;
+        }
+        th {
+            text-align: left;
+            vertical-align: middle;
+            color: #444444;
+            font-size: 15px;
+            width: 35%;
+        }
+        td {
+            vertical-align: middle;
+            color: #333333;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+            box-sizing: border-box;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        input[type="text"]:focus {
+            border-color: #0070f3;
+        }
+        input[type="file"] {
+            font-size: 13px;
+        }
+        .radio-group, .checkbox-group {
+            font-size: 14px;
+        }
+        .submit-btn {
+            background-color: #0070f3;
+            color: white;
+            border: none;
+            padding: 10px 30px;
+            font-size: 15px;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+        .submit-btn:hover {
+            background-color: #0051b3;
+        }
+        .submit-btn:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
 <body>
 
-<center>
+<div class="form-box">
     <h2>Abubakar Siddique</h2>
 
     <form>
-        <table border="0" width="500">
-
+        <table border="0">
             <tr>
                 <th>Name</th>
                 <td>
-                    <input type="text" name="sname">
+                    <input type="text" name="sname" placeholder="Enter name">
                 </td>
             </tr>
 
             <tr>
                 <th>Gender</th>
-                <td>
-                    <input type="radio" name="gender" value="M"> Male
-                    <input type="radio" name="gender" value="F"> Female
+                <td class="radio-group">
+                    <label><input type="radio" name="gender" value="M"> Male</label>&nbsp;&nbsp;
+                    <label><input type="radio" name="gender" value="F"> Female</label>
                 </td>
             </tr>
 
@@ -32,24 +116,22 @@
             </tr>
 
             <tr>
-                <th>Hobby</th>
-                <td>
-                    <input type="checkbox" name="hobby" value="cricket"> Cricket
+                <th style="vertical-align: top; padding-top: 4px;">Hobby</th>
+                <td class="checkbox-group">
+                    <label><input type="checkbox" name="hobby" value="cricket"> Cricket</label>
                     <br>
-                    <input type="checkbox" name="hobby" value="football"> Football
+                    <label><input type="checkbox" name="hobby" value="football"> Football</label>
                 </td>
             </tr>
 
             <tr>
-                <td colspan="2" align="center">
-                    <input type="submit" value="Submit">
-
+                <td colspan="2" align="center" style="padding-top: 15px;">
+                    <input type="submit" value="Submit" class="submit-btn">
                 </td>
             </tr>
-
         </table>
     </form>
-</center>
+</div>
 
 </body>
 </html>
